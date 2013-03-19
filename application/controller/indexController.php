@@ -8,6 +8,6 @@ class indexController extends appController
 	
 	public function index()
 	{
-		$this->view->render=array();	
+		$this->view->render=array('title'=>'raspina');	
 	}	
 }

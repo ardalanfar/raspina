@@ -8,7 +8,7 @@ class model extends Raspina\Db\Db
 		$connection = array(
 		'hostname'=>'localhost',
 		'username'=>'root',
-		'password'=>'2701680',
+		'password'=>'',
 		'database'=>'raspina',
 		'driver'=>'Mysqli',
 		);

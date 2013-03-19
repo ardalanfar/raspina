@@ -16,21 +16,18 @@ if(isset($_REQUEST['action']))
 		$param[$i]=mysql_real_escape_string(strip_tags($param[$i]));
 		$registry->$i=$param[$i];
 	}
-	
-	
 }
 
-
-
-define('LIBRARYDIR', __DIR__ . DIRECTORY_SEPARATOR . 'Library' . DIRECTORY_SEPARATOR);
+define('LIBRARYDIR', __DIR__ . DIRECTORY_SEPARATOR . 'library' . DIRECTORY_SEPARATOR);
 define('PHPEXT', '.php');
 // start class loding
 function __autoload($className)
 {
-	// echo 'ehsan: '.$className;
     $classFilePath = LIBRARYDIR . str_replace('\\', DIRECTORY_SEPARATOR, $className) . PHPEXT;
+    
     if(!file_exists($classFilePath))
         throw new Exception("'{$classFilePath}' class file not find");
+    
     
     require_once $classFilePath;
 }

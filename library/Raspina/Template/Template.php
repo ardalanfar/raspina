@@ -37,9 +37,11 @@ class template
 
 		$escaper = new Twig_Extension_Escaper(true);
 		$twig->addExtension($escaper);
+		echo $tmp;
+
 		
-		$base=$twig->loadTemplate('default.php');
-		$this->baseRender['content']=$tmp;
-		$base->display($this->baseRender);
+		// $base=$twig->loadTemplate('default.php');
+		// $this->baseRender['content']=$tmp;
+		//$base->display($this->baseRender);
 	}
 }
